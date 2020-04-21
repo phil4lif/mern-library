@@ -9,9 +9,10 @@ export class Search extends Component {
     };
     
     searchBooks = query => {
+        console.log(query)
         API.search(query)
         .then(res => {
-            this.setState({ results: res.data.data})
+            this.setState({ results: res.data.items})
         console.log(res)})
         .catch(err => console.log(err))
     }
