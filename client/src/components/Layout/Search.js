@@ -9,7 +9,6 @@ export class Search extends Component {
     };
     
     searchBooks = query => {
-        console.log(query)
         API.search(query)
         .then(res => {
             this.setState({ results: res.data.items})
@@ -34,7 +33,7 @@ export class Search extends Component {
                 search={this.state.search}
                 handleFormSubmit={this.handleFormSubmit}
                 handleChange={this.handleChange}/>
-                <SearchResults results={this.state.results} />
+                <SearchResults query={this.state.search} results={this.state.results} />
             </div>
         )
     }
