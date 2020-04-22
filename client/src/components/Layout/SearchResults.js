@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Container, CssBaseline, Typography } from '@material-ui/core';
 import { grey } from '@material-ui/core/colors';
+import SaveBtn from './SaveBtn';
 
 function SearchResults(props) {
     return (
@@ -14,6 +15,7 @@ function SearchResults(props) {
             <img alt={result.volumeInfo.title} className="img-fluid" src={result.volumeInfo.imageLinks.thumbnail} />
             <p>Description: {result.volumeInfo.description}</p>
             <a href={result.volumeInfo.infoLink}>infoLink</a>
+            <SaveBtn saveBook={props.saveBook} result={result}  />
           </li>
         ))}
       </ul>
@@ -25,5 +27,4 @@ export default SearchResults
 
 const listStyle = {
     background: 'grey',
-
 }

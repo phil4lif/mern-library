@@ -6,6 +6,8 @@ export default {
     search: function(query){
     console.log(BASEURL + query);
     return axios.get(BASEURL + query);
-    
+    },
+    saveBook : function(newbook){
+    return axios.post("/api/books", newbook)    
     }
 };
