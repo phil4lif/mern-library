@@ -9,6 +9,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
+import { Link } from 'react-router-dom';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -98,8 +99,8 @@ export default function SearchAppBar() {
                         open={open}
                         onClose={handleClose}
                     >
-                        <MenuItem onClick={handleClose}>Search</MenuItem>
-                        <MenuItem onClick={handleClose}>Saved Books</MenuItem>
+                        <MenuItem onClick={handleClose}><Link to="/">Search</Link></MenuItem>
+                        <MenuItem onClick={handleClose}><Link to="/saved">Saved Books</Link></MenuItem>
                         <MenuItem onClick={handleClose}>About</MenuItem>
                     </Menu>
                     <Typography className={classes.title} variant="h6" noWrap>
