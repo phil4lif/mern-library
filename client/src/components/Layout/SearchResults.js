@@ -6,7 +6,8 @@ import SaveBtn from './SaveBtn';
 function SearchResults(props) {
     return (
         <React.Fragment>
-        <div>Showing Results For: {props.query} </div>
+        
+        <div style={resultsContainer}><div>Showing Results For: {props.query} </div>
       <ul>
         {props.results.map(result => (
           <li className="list-group-item" key={result.id} style={listStyle}>
@@ -19,6 +20,7 @@ function SearchResults(props) {
           </li>
         ))}
       </ul>
+      </div>
       </React.Fragment>
     );
   }
@@ -27,4 +29,12 @@ export default SearchResults
 
 const listStyle = {
     background: 'grey',
+    listStyle: 'none',
+    maxWidth: '90%'
+}
+const resultsContainer = {
+  margin: '5%',
+  maxWidth: '50%',
+  border: '2px solid black',
+  padding: '15px'
 }

@@ -13,6 +13,7 @@ export class Search extends Component {
     searchBooks = query => {
         API.search(query)
         .then(res => {
+            console.log(res.data)
             this.setState({ results: res.data.items})
         })
         .catch(err => console.log(err))

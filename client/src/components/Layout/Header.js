@@ -99,9 +99,9 @@ export default function SearchAppBar() {
                         open={open}
                         onClose={handleClose}
                     >
-                        <MenuItem onClick={handleClose}><Link to="/">Search</Link></MenuItem>
-                        <MenuItem onClick={handleClose}><Link to="/saved">Saved Books</Link></MenuItem>
-                        <MenuItem onClick={handleClose}>About</MenuItem>
+                        <MenuItem onClick={handleClose}><Link to="/" style={linkStyle}>Search</Link></MenuItem>
+                        <MenuItem onClick={handleClose}><Link to="/saved" style={linkStyle}>Saved Books</Link></MenuItem>
+                        <MenuItem onClick={handleClose}><Link to="/about" style={linkStyle}>About</Link></MenuItem>
                     </Menu>
                     <Typography className={classes.title} variant="h6" noWrap>
                         Google Books
@@ -110,4 +110,9 @@ export default function SearchAppBar() {
             </AppBar>
         </div>
     );
+}
+
+const linkStyle = {
+    color: 'blue',
+    textDecoration: 'none'
 }
