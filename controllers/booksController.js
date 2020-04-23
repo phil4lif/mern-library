@@ -9,11 +9,10 @@ module.exports = {
   create: function(newbook) {
     console.log(newbook)
    return db.Book.create(newbook)
- 
   },
 
   remove: function(id) {
     return db.Book
-      .findById({ _id: id })
+    .findById({ _id: id })
   }
 };

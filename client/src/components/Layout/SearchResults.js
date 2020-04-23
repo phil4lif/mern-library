@@ -14,7 +14,7 @@ function SearchResults(props) {
               <h3>-{result.volumeInfo.authors}</h3>
             <img alt={result.volumeInfo.title} className="img-fluid" src={result.volumeInfo.imageLinks.thumbnail} />
             <p>Description: {result.volumeInfo.description}</p>
-            <a href={result.volumeInfo.infoLink}>infoLink</a>
+            <a target="_blank" href={result.volumeInfo.infoLink}>infoLink</a>
             <SaveBtn saveBook={props.saveBook} result={result}  />
           </li>
         ))}

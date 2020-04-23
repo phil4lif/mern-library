@@ -36,7 +36,7 @@ export class Saved extends Component {
                             <h3>-{result.author}</h3>
                             <img alt={result.title} className="img-fluid" src={result.image} />
                             <p>Description: {result.synopsis}</p>
-                            <a href={result.link}>infoLink</a>
+                            <a target="_blank" href={result.link}>infoLink</a>
                             <button result={result} onClick={() => this.delBook(result._id)} dataid={result._id}>delete book</button>
                         </li>))}
                 </ul>
