@@ -22,9 +22,10 @@ app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 //connect to the Mongo Db
-mongoose.connect(process.env.MONGODB_URI || "mongodb://newUser:newPassword2@ds125871/heroku_0xn0jnk7");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://newUser:newPassword2@ds125871/heroku_0xn0jnk7" );
 //add this instead of localhost location for build/deployment
-// ||  "mongodb://localhost/reactreadinglist"
+//||  "mongodb://localhost/reactreadinglist"
+
 
 app.listen(PORT, () => {
   console.log(`🌎 ==> API server now on port ${PORT}!`);

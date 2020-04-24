@@ -55,7 +55,8 @@ const listStyle = {
     maxWidth: '90%'
 }
 const resultsContainer = {
-    margin: '5%',
+    marginTop: '100px',
+    marginLeft: '25%',
     maxWidth: '50%',
     border: '2px solid black',
     padding: '15px'
