@@ -79,7 +79,7 @@ export default function SearchAppBar() {
     };
     return (
         <div className={classes.root}>
-            <AppBar position="static">
+            <AppBar style={{backgroundColor:'rgba(190, 125, 2, 0.71)'}} position="static">
                 <Toolbar>
                     <IconButton
                         edge="start"
@@ -104,7 +104,7 @@ export default function SearchAppBar() {
                         <MenuItem onClick={handleClose}><Link to="/about" style={linkStyle}>About</Link></MenuItem>
                     </Menu>
                     <Typography className={classes.title} variant="h6" noWrap>
-                        Google Books
+                        Mern Library
           </Typography>
                 </Toolbar>
             </AppBar>
@@ -113,6 +113,6 @@ export default function SearchAppBar() {
 }
 
 const linkStyle = {
-    color: 'blue',
+    color: 'rgba(142, 65, 10, 1)',
     textDecoration: 'none'
 }

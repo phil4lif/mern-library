@@ -37,8 +37,11 @@ export class Saved extends Component {
                                 <h3>-{result.author}</h3>
                                 <img alt={result.title} className="img-fluid" src={result.image} />
                                 <p>Description: {result.synopsis}</p>
-                                <a target="_blank" href={result.link}>infoLink</a>
-                                <button result={result} onClick={() => this.delBook(result._id)} dataid={result._id}>delete book</button>
+                                <a target="_blank" href={result.link}><button style={btnStyle}>Info Link</button></a>
+                                <br />
+                                <br />
+                                <button result={result} style={btnStyle} onClick={() => this.delBook(result._id)} dataid={result._id}>Delete book</button>
+                                <br />
                             </li>))}
                     </ul>
                 </div>
@@ -52,12 +55,22 @@ export default Saved
 const listStyle = {
     background: 'grey',
     listStyle: 'none',
-    maxWidth: '90%'
+    maxWidth: '90%',
+    backgroundColor: 'rgba(190, 125, 2, 0.71)'
 }
 const resultsContainer = {
     marginTop: '100px',
     marginLeft: '25%',
     maxWidth: '50%',
-    border: '2px solid black',
-    padding: '15px'
+    // border: '2px solid black',
+    padding: '15px',
+    // backgroundColor: 'rgba(190, 125, 2, 0.71)'
+}
+const btnStyle = {
+    backgroundColor: 'brown',
+    color: 'white',
+    border: 'none',
+    padding: '5px 9px',
+    cursor: 'pointer',
+    height: '35px'
 }

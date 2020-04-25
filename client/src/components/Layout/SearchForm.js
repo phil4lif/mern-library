@@ -37,12 +37,11 @@ const inputStyle = {
 }
 
 const btnStyle = {
-  background: '#ff0000',
-  color: '#fff',
+  backgroundColor: 'brown',
+  color: 'white',
   border: 'none',
   padding: '5px 9px',
-  borderRadius: '50%',
   cursor: 'pointer',
-  height: '35px'
-  // float: 'right'
+  height: '35px',
+  marginTop: '10px'
 }

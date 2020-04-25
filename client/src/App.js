@@ -5,6 +5,7 @@ import Header from "./components/Layout/Header";
 import Search from './components/Layout/Search';
 import Saved from './components/Layout/Saved';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import  About from './components/About'
 
 class App extends Component {
   render() {
@@ -15,6 +16,7 @@ class App extends Component {
         <Switch>
         <Route exact path="/" component={Search} />
         <Route exact path="/saved" component={Saved} />
+        <Route path="/about" component={About} />
         </Switch>
       </div>
       </Router>
