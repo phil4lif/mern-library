@@ -13,7 +13,7 @@ function SearchResults(props) {
             <li className="list-group-item" key={result.id} style={listStyle}>
               <h3>{result.volumeInfo.title}</h3>
               <h3>-{result.volumeInfo.authors}</h3>
-              <img alt={result.volumeInfo.title} src={result.volumeInfo.imageLinks.thumbnail} />
+              <img alt={result.volumeInfo.title} src={(result.volumeInfo.imageLinks) ? result.volumeInfo.imageLinks.thumbnail : "http://lorempixel.com/128/197"} />
               <p>Description: {result.volumeInfo.description}</p>
               <a target="_blank" href={result.volumeInfo.infoLink}><button style={btnStyle}>Info Link</button></a>
               <br />
