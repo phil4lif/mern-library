@@ -13,18 +13,18 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-const apiRoutes = require("./routes/apiRoutes")(app)
-// Define API routes here
 
+// Define API routes here
+const apiRoutes = require("./routes/apiRoutes")(app)
 // Send every other request to the React app
 // Define any API routes before this runs
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 //connect to the Mongo Db
-mongoose.connect(process.env.MONGODB_URI || "mongodb://newUser:newPassword2@ds125871/heroku_0xn0jnk7" );
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactreadinglist" );
 //add this instead of localhost location for build/deployment
-//|| ""mongodb://localhost/reactreadinglist
+//|| ""mongodb://newUser:newPassword2@ds125871/heroku_0xn0jnk7
 
 app.listen(PORT, () => {
   console.log(`🌎 ==> API server now on port ${PORT}!`);
