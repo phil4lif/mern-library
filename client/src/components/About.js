@@ -7,9 +7,7 @@ export default function About() {
                 <div style={resultsContainer}>
                     <h1>About</h1>
                     <p>
-                        This application is made using the MERN stack and the google books api.
-                        It allows the user to search for books by title, and save them to a database,
-                        and view books that were saved in the database.
+                        Made by Phil Cowan for educational purposes.
                     </p>
                 </div>
             </React.Fragment>
