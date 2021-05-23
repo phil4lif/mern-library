@@ -11,7 +11,7 @@ function apiRoutes(app) {
         let newbook = req.body;
         console.log(newbook)
         booksController.create(newbook)
-            .then(dbModel => res.json(dbModel.data));
+            .then(dbModel => res.json(dbModel.data))
             .catch(err => console.log(err));
 
     })
