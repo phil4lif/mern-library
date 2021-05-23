@@ -9,8 +9,10 @@ function apiRoutes(app) {
     })
     app.post("/api/books", (req, res) => {
         let newbook = req.body;
+        console.log(newbook)
         booksController.create(newbook)
-            .then(dbModel => res.json(dbModel.data))
+            .then(dbModel => res.json(dbModel.data));
+            .catch(err => console.log(err));
 
     })
     app.delete("/api/books/:id", (req, res) => {
